@@ -1,3 +1,4 @@
+<!-- projects.liquid -->
 <section
   id="projects"
   class="has_scroll--speed__section"
@@ -5,36 +6,96 @@
   <div class="projects_container--main">
     <div class="projects_content">
       <div class="project_title site_title--container">
-        <h2 class="site_section--title">Projects</h2>
+        <h2 class="site_section--title">
+          {{ section.settings.title }}
+        </h2>
         <p class="site_section--decs">
-          Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs.
+          {{ section.settings.description }}
         </p>
       </div>
       <div class="project_content--items">
+        {% for block in section.blocks %}
         <div class="project_content-item has_scroll--speed__element" data-scroll-speed="3.5">
           <div class="project_img--mian">
             <img
-              src="{{ 'Frame_12.png' | asset_url }}"
-              alt=""
+              src="{{ block.settings.project_image | asset_url }}"
+              alt="{{ block.settings.project_name }}"
               class="project_img" />
           </div>
           <div class="project_text--area">
             <div class="project_text--content">
               <div class="project_area--name">
-                <h3 class="project_name">Creative Printer</h3>
+                <h3 class="project_name">{{ block.settings.project_name }}</h3>
               </div>
               <div class="project_area--tag">
-                <p class="project_tag">Graphics Design Agency</p>
+                <p class="project_tag">{{ block.settings.project_tag }}</p>
               </div>
             </div>
             <div class="project_link--area">
-              <a href="#" class="project_link--arrow">
-                <img src="{{ 'arrow.webp' | asset_url }}" alt="" />
+              <a href="{{ block.settings.project_link }}" class="project_link--arrow">
+                <img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow" />
               </a>
             </div>
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
   </div>
 </section>
+{% schema %}
+{
+  "name": "Projects Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Projects"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Section Description",
+      "default": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "project",
+      "name": "Project Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "project_image",
+          "label": "Project Image"
+        },
+        {
+          "type": "text",
+          "id": "project_name",
+          "label": "Project Name",
+          "default": "Creative Printer"
+        },
+        {
+          "type": "text",
+          "id": "project_tag",
+          "label": "Project Tag",
+          "default": "Graphics Design Agency"
+        },
+        {
+          "type": "url",
+          "id": "project_link",
+          "label": "Project Link",
+          "default": "/"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Projects Section",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}
