@@ -80,7 +80,9 @@
       })
     }
   
-    offcanvsMenu()
+   document.addEventListener('DOMContentLoaded', () => {
+  offcanvsMenu();
+});
   
     function particalsMainFn () {
       particlesJS('Home', {
