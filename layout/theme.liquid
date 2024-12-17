@@ -64,15 +64,15 @@
 </head>
 
 <body>
-    {% include 'header' %}
+    {% render 'header' %}
     <main>
-        {% section 'home' %}
-        {% section 'services' %}
+        {% section 'Home' %}
+        {% section 'Services' %}
         {% section 'projects' %}
         {% section 'skills' %}
         {% section 'contact' %}
     </main>
-    {% include 'footer' %}
+    {% render 'footer' %}
     {{ content_for_layout }}
     <script src="{{ 'lenis.js' | asset_url }}"></script>
     <script src="{{ 'partical.js' | asset_url }}"></script>
