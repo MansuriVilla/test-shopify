@@ -21,11 +21,12 @@
     "name": "Header",
     "settings": [
       {
-        "type": "image_picker",
-        "id": "header_logo",
-        "label": "Header logo",
-        "info": "Upload your logo for the header."
-      }
+  "type": "image_picker",
+  "id": "header_logo",
+  "label": "Header logo",
+  "default": "https://cdn.shopify.com/s/files/1/0687/5040/9897/files/Frame_213.png?v=1734440674"
+}
+
     ]
   },
   {
