@@ -1,0 +1,51 @@
+[
+    {
+      "name": "General Settings",
+      "settings": [
+        {
+          "type": "text",
+          "id": "theme_name",
+          "label": "Theme Name",
+          "default": "My Custom Theme",
+          "info": "The name of your theme."
+        },
+        {
+          "type": "color",
+          "id": "primary_color",
+          "label": "Primary Color",
+          "default": "#3498db"
+        }
+      ]
+    },
+    {
+      "name": "Header Settings",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "header_logo",
+          "label": "Header Logo",
+          "default": "shopify://image/logo.png",
+          "info": "Upload your logo to be displayed in the header."
+        },
+        {
+          "type": "checkbox",
+          "id": "show_search",
+          "label": "Show Search Bar",
+          "default": true
+        }
+      ]
+    },
+    {
+      "name": "Footer Settings",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "footer_text",
+          "label": "Footer Text",
+          "default": "Powered by Shopify",
+          "info": "Text that will appear in the footer."
+        }
+      ]
+    }
+  ]
+  

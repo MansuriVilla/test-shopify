@@ -1,0 +1,11 @@
+{
+    "current": {
+      "theme_name": "My Custom Theme",
+      "primary_color": "#3498db",
+      "header_logo": "shopify://image/logo.png",
+      "show_search": true,
+      "footer_text": "Powered by Shopify"
+    },
+    "previous": {}
+  }
+  

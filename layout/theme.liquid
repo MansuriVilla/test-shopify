@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ shop.meta_description }}" />
+    <meta name="keywords" content="{{ shop.keywords }}" />
+    <meta name="author" content="{{ shop.author }}" />
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:description" content="{{ shop.meta_description }}" />
+    <meta property="og:image" content="{{ 'fav-icon.png' | asset_url }}" />
+    <meta property="og:url" content="{{ shop.url }}" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page_title }}" />
+    <meta name="twitter:description" content="{{ shop.meta_description }}" />
+    <meta name="twitter:image" content="{{ 'fav-icon.png' | asset_url }}" />
+    <link rel="icon" href="{{ 'fav-icon.png' | asset_url }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ 'fav-icon.png' | asset_url }}" />
+    <link rel="stylesheet" href="{{ 'styles.css' | asset_url }}" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Adnan Mansuri",
+            "jobTitle": "Freelance Website Developer, UI/UX Designer, Graphic Designer",
+            "url": "https://www.adnanmansuri.com",
+            "sameAs": [
+                "https://www.linkedin.com/in/adnanmansuri",
+                "https://github.com/adnanmansuri",
+                "https://twitter.com/adnanmansuri"
+            ],
+            "image": "{{ 'fav-icon.png' | asset_url }}",
+            "description": "Adnan Mansuri is a freelance website developer, UI/UX designer, and graphic designer specializing in creating responsive websites, user-centric designs, and striking graphics.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ahmedabad",
+                "addressRegion": "Gujarat",
+                "addressCountry": "India"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91 834 769 3235",
+                "areaServed": "Global",
+                "availableLanguage": ["English", "Hindi", "Gujarati"]
+            }
+        }
+    </script>
+    <script>
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () {
+                (c[a].q = c[a].q || []).push(arguments);
+            };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "pbyrjkog7k");
+    </script>
+</head>
+
+<body>
+    {% include 'header' %}
+    <main>
+        {% section 'home' %}
+        {% section 'services' %}
+        {% section 'projects' %}
+        {% section 'skills' %}
+        {% section 'contact' %}
+    </main>
+    {% include 'footer' %}
+    <script src="{{ 'lenis.js' | asset_url }}"></script>
+    <script src="{{ 'partical.js' | asset_url }}"></script>
+    <script src="{{ 'scrolltrigger.min.js' | asset_url }}"></script>
+    <script src="{{ 'gsap.min.js' | asset_url }}"></script>
+    <script src="{{ 'app.js' | asset_url }}"></script>
+</body>
+
+</html>

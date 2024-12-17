@@ -1,0 +1,16 @@
+@media only screen and (max-width:768px) {
+    .off-canvas-menu .cta_main { display: block; }
+   .header .menu-toggle,.off-canvas-menu { display: block; }
+   .off-canvas-menu { position: fixed; top: 0; right: 0; height: 100svh; width: 100%; border-radius: 20px; background: #333; color: white; transform: translateX(200%); transition: transform 0.5s linear; z-index: 1000; display: flex; flex-direction: column; }
+   .off-canvas-menu .cta_main { background-color: transparent; }
+   .craft { flex-direction: column; }
+   .craft .craft-right { margin-right: 0; padding: 30px 0px; }
+   .site_title--container { flex-wrap: wrap; row-gap: 20px; }
+   .skills_icon--area { column-gap: clamp(30px, 7vw, 150px); }
+   .site_footer { overflow: hidden; }
+   .site_footer-left { position: absolute; left: 0; z-index: -1; opacity: .5; height: 114%; top: 50%; transform: translate(-38%, -50%); ; }
+   .site_footer-left img { height: 100%; }
+   .site_footer-container { position: relative; }
+   .site_footer-container .site_navigation--item { flex: 100%; }
+    }
+   
