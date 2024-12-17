@@ -1,7 +1,4 @@
-@import url('{{ "style.css" | asset_url }}');
-@import url('{{ "responsive.css" | asset_url }}');
-@import url('{{ "global.css" | asset_url }}');
-@import url('{{ "fonts.css" | asset_url }}');
+
 
 
 * { margin: 0px; padding: 0px; box-sizing: border-box; scroll-behavior: smooth; }
