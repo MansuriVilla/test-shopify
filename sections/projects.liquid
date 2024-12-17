@@ -1,4 +1,7 @@
-<section id="projects" class="has_scroll--speed__section" data-disable-scroll-animation="768">
+<section
+  id="projects"
+  class="has_scroll--speed__section"
+  data-disable-scroll-animation="768">
   <div class="projects_container--main">
     <div class="projects_content">
       <div class="project_title site_title--container">
@@ -7,30 +10,31 @@
       </div>
       <div class="project_content--items">
         {% for block in section.blocks %}
-        <div class="project_content-item has_scroll--speed__element" data-scroll-speed="3.5">
-          <div class="project_img--mian">
-            {% if block.settings.project_image %}
-              <img src="{{ block.settings.project_image | image_url }}" alt="{{ block.settings.project_name }}" class="project_img" />
-            {% else %}
-              <img src="https://via.placeholder.com/300" alt="Default Image" class="project_img" />
-            {% endif %}
-          </div>
-          <div class="project_text--area">
-            <div class="project_text--content">
-              <div class="project_area--name">
-                <h3 class="project_name">{{ block.settings.project_name }}</h3>
+          <div
+            class="project_content-item has_scroll--speed__element"
+            data-scroll-speed="{{ block.settings.scroll_speed | default: 3.5 }}">
+            <div class="project_img--mian">
+              <img
+                src="{{ block.settings.project_image | image_url }}"
+                alt="{{ block.settings.project_name }}"
+                class="project_img" />
+            </div>
+            <div class="project_text--area">
+              <div class="project_text--content">
+                <div class="project_area--name">
+                  <h3 class="project_name">{{ block.settings.project_name }}</h3>
+                </div>
+                <div class="project_area--tag">
+                  <p class="project_tag">{{ block.settings.project_tag }}</p>
+                </div>
               </div>
-              <div class="project_area--tag">
-                <p class="project_tag">{{ block.settings.project_tag }}</p>
+              <div class="project_link--area">
+                <a href="{{ block.settings.project_link }}" class="project_link--arrow">
+                  <img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow" />
+                </a>
               </div>
             </div>
-            <div class="project_link--area">
-              <a href="{{ block.settings.project_link }}" class="project_link--arrow">
-                <img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow" />
-              </a>
-            </div>
           </div>
-        </div>
         {% endfor %}
       </div>
     </div>
@@ -39,7 +43,7 @@
 
 {% schema %}
 {
-  "name": "Projects Section",
+  "name": "Projects",
   "settings": [
     {
       "type": "text",
@@ -81,6 +85,15 @@
           "id": "project_link",
           "label": "Project Link",
           "default": "/"
+        },
+        {
+          "type": "range",
+          "id": "scroll_speed",
+          "label": "Scroll Speed",
+          "default": 3.5,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5
         }
       ]
     }
@@ -88,8 +101,9 @@
   "presets": [
     {
       "name": "Projects Section",
-      "category": "Custom Sections"
+      "category": "Custom"
     }
   ]
 }
+
 {% endschema %}
