@@ -9,10 +9,6 @@
  */
 {
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {}
-    },
     "main-content": {
       "type": "Home",
       "settings": {}
@@ -20,16 +16,10 @@
     "services": {
       "type": "Services",
       "settings": {}
-    },
-    "footer": {
-      "type": "footer",
-      "settings": {}
     }
   },
   "order": [
-    "header",
     "main-content",
-    "services",
-    "footer"
+    "services"
   ]
 }
