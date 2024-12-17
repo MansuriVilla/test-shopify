@@ -1,6 +1,31 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<header class="header">
+  <div class="header_inner">
+    <div class="header_content container">
+      <nav class="header_navigations_links">
+        <div class="header_brand_logo site_navigation--item">
+          <a href="{{ shop.url }}">
+            <img src="{{ 'logo-gradient.svg' | asset_url }}" alt="Adnan Mansuri Logo" />
+          </a>
+        </div>
+        <ul class="menu site_navigation--item">
+          <li>
+            <a href="#Home" class="header_nav_links has_active--effect">Home</a>
+          </li>
+          <li>
+            <a href="#services" class="header_nav_links has_active--effect">Services</a>
+          </li>
+          <li>
+            <a href="#projects" class="header_nav_links has_active--effect">Projects</a>
+          </li>
+          <li>
+            <a href="#skills" class="header_nav_links has_active--effect">Skills</a>
+          </li>
+        </ul>
+        <div class="cta_main diraction_aware_hover site_navigation--item">
+          <a href="#" class="cta">Start Project</a>
+        </div>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </div>
+</header>
