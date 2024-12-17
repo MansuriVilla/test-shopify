@@ -36,22 +36,46 @@
               "project_image": "shopify://shop_images/Frame_12.png",
               "project_name": "Creative Printer",
               "project_tag": "Graphics Design Agency",
-              "project_link": "/"
+              "project_link": "/",
+              "scroll_speed": 3.5
             }
           },
           "project_pjQca7": {
             "type": "project",
             "settings": {
               "project_image": "shopify://shop_images/Frame_13.png",
-              "project_name": "Creative Printer 2",
-              "project_tag": "Graphics Design Agency",
-              "project_link": "/"
+              "project_name": "A One Enterprise",
+              "project_tag": "Import & Export Broker Company",
+              "project_link": "/",
+              "scroll_speed": 3.5
+            }
+          },
+          "project_bPfMxa": {
+            "type": "project",
+            "settings": {
+              "project_image": "shopify://shop_images/Frame_14.png",
+              "project_name": "Interno",
+              "project_tag": "Intirior Designing Company",
+              "project_link": "/",
+              "scroll_speed": 3.5
+            }
+          },
+          "project_zPNMaR": {
+            "type": "project",
+            "settings": {
+              "project_image": "shopify://shop_images/Frame_15.png",
+              "project_name": "Brooklyn Travel & Tourism",
+              "project_tag": "Travel Company",
+              "project_link": "/",
+              "scroll_speed": 3.5
             }
           }
         },
         "block_order": [
           "project_xHp4aT",
-          "project_pjQca7"
+          "project_pjQca7",
+          "project_bPfMxa",
+          "project_zPNMaR"
         ],
         "settings": {
           "title": "Projects",
@@ -60,7 +84,122 @@
       },
       "skills": {
         "type": "skills",
-        "settings": {}
+        "blocks": {
+          "skill_h9bKqh": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/html.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_tbz3xT": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/css.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_pXK4Fb": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/js.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_iMbgcT": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/jquery.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_BMpwyz": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/gsap.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_NbkrdP": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/bootstrap.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_Emjx8z": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/vscode.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_NqdJXd": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/sublime_text.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_hQf4V4": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/ai.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_NPgUgz": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/ps.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_4ftxtp": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/xd.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          },
+          "skill_LwcL3j": {
+            "type": "skill",
+            "settings": {
+              "skill_icon": "shopify://shop_images/wp.webp",
+              "skill_name": "Skill Name",
+              "scroll_speed": 10
+            }
+          }
+        },
+        "block_order": [
+          "skill_h9bKqh",
+          "skill_tbz3xT",
+          "skill_pXK4Fb",
+          "skill_iMbgcT",
+          "skill_BMpwyz",
+          "skill_NbkrdP",
+          "skill_Emjx8z",
+          "skill_NqdJXd",
+          "skill_hQf4V4",
+          "skill_NPgUgz",
+          "skill_4ftxtp",
+          "skill_LwcL3j"
+        ],
+        "settings": {
+          "title": "Skills Set",
+          "description": "I leverage a variety of tools and technologies to craft dynamic websites with robust functionality, ensuring optimal performance and user satisfaction for your projects."
+        }
       },
       "footer": {
         "type": "footer",
