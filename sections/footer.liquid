@@ -1,6 +1,52 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<footer class="site_footer">
+    <div class="site_footer-container">
+        <div class="site_footer-left site_navigation--item">
+            <a href="{{ shop.url }}">
+                <!-- Use Shopify's logo asset URL -->
+                <img src="{{ 'logo-big.svg' | asset_url }}" alt="{{ shop.name }} Logo" />
+            </a>
+        </div>
+        <div class="site_footer-right site_navigation--item">
+            <ul class="site_footer-nav">
+                <li class="site_footer-nav--links menu-section">
+                    <h4 class="site_footer--title">Menu</h4>
+                </li>
+                <li class="site_footer-nav--links menu-section">
+                    <a href="{{ shop.url }}" class="has_active--effect">Home</a>
+                </li>
+                <li class="site_footer-nav--links menu-section">
+                    <a href="{{ shop.url }}#services" class="has_active--effect">Services</a>
+                </li>
+                <li class="site_footer-nav--links menu-section">
+                    <a href="{{ shop.url }}#projects" class="has_active--effect">Projects</a>
+                </li>
+                <li class="site_footer-nav--links menu-section">
+                    <a href="{{ shop.url }}#skills" class="has_active--effect">Skills Set</a>
+                </li>
+            </ul>
+            <ul class="site_footer-nav">
+                <li class="site_footer-nav--links contact-section">
+                    <h4 class="site_footer--title">Contact me</h4>
+                </li>
+                <li class="site_footer-nav--links contact-section">
+                    <!-- Replace the phone number with a dynamic link -->
+                    <a href="tel:+{{ shop.phone | remove: ' ' }}" class="has_active--effect">{{ shop.phone }}</a>
+                    <span><img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow Icon" /></span>
+                </li>
+                <li class="site_footer-nav--links contact-section">
+                    <!-- Replace the email address with a dynamic link -->
+                    <a href="mailto:{{ 'hello@adnanmansuri.com' }}" class="has_active--effect">hello@adnanmansuri.com</a>
+                    <span><img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow Icon" /></span>
+                </li>
+            </ul>
+        </div>
+        <div class="site_footer-bottom site_navigation--item">
+            <!-- Use the Liquid `current_year` to dynamically display the current year -->
+            <p>Copyright © <span id="year">{{ 'now' | date: "%Y" }}</span> {{ shop.name }}. All rights reserved.</p>
+            <!-- Replace the LinkedIn link dynamically -->
+            <a href="https://www.linkedin.com/in/adnanmansuri/" class="has_active--effect">
+                <img src="{{ 'linkdin.svg' | asset_url }}" alt="Adnan Mansuri's Linkedin Profile" />
+            </a>
+        </div>
+    </div>
+</footer>
