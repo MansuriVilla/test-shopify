@@ -64,11 +64,9 @@
 </head>
 
 <body>
-    {% section 'header' %}
-    <main>
-        {{ content_for_layout }}
-    </main>
-    {% section 'footer' %}
+   <main id="MainContent" class="content-for-layout" role="main">
+    {{ content_for_layout }}
+  </main>
     <script src="{{ 'lenis.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'partical.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'scrolltrigger.min.js' | asset_url }}" defer="defer"></script>
