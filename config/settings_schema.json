@@ -6,8 +6,7 @@
         "type": "text",
         "id": "theme_name",
         "label": "Theme Name",
-        "default": "My Custom Theme",
-        "info": "The name of your theme."
+        "default": "My Custom Theme"
       },
       {
         "type": "color",
@@ -21,12 +20,10 @@
     "name": "Header",
     "settings": [
       {
-  "type": "image_picker",
-  "id": "header_logo",
-  "label": "Header logo",
-  "default": "https://cdn.shopify.com/s/files/1/0687/5040/9897/files/Frame_213.png?v=1734440674"
-}
-
+        "type": "image_picker",
+        "id": "header_logo",
+        "label": "Header logo"
+      }
     ]
   },
   {
@@ -36,8 +33,7 @@
         "type": "textarea",
         "id": "footer_text",
         "label": "Footer Text",
-        "default": "Powered by Shopify",
-        "info": "Text that will appear in the footer."
+        "default": "Powered by Shopify"
       }
     ]
   }
