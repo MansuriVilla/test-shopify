@@ -1,1 +1,4 @@
-@import url(./style.css); @import url(./resopnsive.css); @import url(./global.css); @import url(./fonts.css); 
+@import url('{{ "style.css" | asset_url }}');
+@import url('{{ "responsive.css" | asset_url }}');
+@import url('{{ "global.css" | asset_url }}');
+@import url('{{ "fonts.css" | asset_url }}');
