@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     const lenis = new Lenis()
     lenis.on('scroll', ScrollTrigger.update)
   
@@ -396,5 +396,5 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     })
     document.getElementById('year').textContent = new Date().getFullYear()
-  })
+
   
