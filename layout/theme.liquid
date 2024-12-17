@@ -66,10 +66,7 @@
 <body>
     {% section 'header' %}
     <main>
-        {% section 'Home' %}
-        {% section 'Services' %}
-        {% section 'projects' %}
-        {% section 'skills' %}
+        {{ content_for_layout }}
     </main>
     {% section 'footer' %}
     {{ content_for_layout }}
