@@ -8,13 +8,56 @@
  * ------------------------------------------------------------
  */
 {
-    "current": {
-      "theme_name": "My Custom Theme",
-      "primary_color": "#3498db",
-      "header_logo": "shopify://image/logo.png",
-      "show_search": true,
-      "footer_text": "Powered by Shopify"
+  "current": {
+    "theme_name": "My Custom Theme",
+    "primary_color": "#3498db",
+    "header_logo": "shopify://image/logo.png",
+    "show_search": true,
+    "footer_text": "Powered by Shopify",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {}
+      },
+      "Home": {
+        "type": "Home",
+        "settings": {}
+      },
+      "Services": {
+        "type": "Services",
+        "settings": {}
+      },
+      "projects": {
+        "type": "projects",
+        "blocks": {
+          "project_xHp4aT": {
+            "type": "project",
+            "settings": {
+              "project_image": "shopify://shop_images/Frame_12.png",
+              "project_name": "Creative Printer",
+              "project_tag": "Graphics Design Agency",
+              "project_link": "/"
+            }
+          }
+        },
+        "block_order": [
+          "project_xHp4aT"
+        ],
+        "settings": {
+          "title": "Projects",
+          "description": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs."
+        }
+      },
+      "skills": {
+        "type": "skills",
+        "settings": {}
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {}
+      }
     },
-    "previous": {}
-  }
-  
+    "content_for_index": []
+  },
+  "previous": {}
+}
