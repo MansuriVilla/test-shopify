@@ -10,18 +10,14 @@
 {
   "sections": {
 
-    "main-content": {
-      "type": "Home",
-      "settings": {}
-    },
+
     "services": {
       "type": "Services",
       "settings": {}
     }
   },
   "order": [
-    
-    "main-content",
+  
     "services",
   ]
 }
