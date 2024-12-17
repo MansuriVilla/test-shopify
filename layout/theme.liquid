@@ -74,11 +74,11 @@
     </main>
     {% render 'footer' %}
     {{ content_for_layout }}
-    <script src="{{ 'lenis.js' | asset_url }}"></script>
-    <script src="{{ 'partical.js' | asset_url }}"></script>
-    <script src="{{ 'scrolltrigger.min.js' | asset_url }}"></script>
-    <script src="{{ 'gsap.min.js' | asset_url }}"></script>
-    <script src="{{ 'app.js' | asset_url }}"></script>
+    <script src="{{ 'lenis.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'partical.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'scrolltrigger.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'gsap.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'app.js' | asset_url }}" defer="defer"></script>
 </body>
 
 </html>
