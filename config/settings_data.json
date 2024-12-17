@@ -38,10 +38,20 @@
               "project_tag": "Graphics Design Agency",
               "project_link": "/"
             }
+          },
+          "project_pjQca7": {
+            "type": "project",
+            "settings": {
+              "project_image": "shopify://shop_images/Frame_13.png",
+              "project_name": "Creative Printer 2",
+              "project_tag": "Graphics Design Agency",
+              "project_link": "/"
+            }
           }
         },
         "block_order": [
-          "project_xHp4aT"
+          "project_xHp4aT",
+          "project_pjQca7"
         ],
         "settings": {
           "title": "Projects",
