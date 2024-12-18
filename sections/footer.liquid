@@ -2,7 +2,7 @@
   <div class="site_footer-container">
     <div class="site_footer-left site_navigation--item">
       <a href="{{ shop.url }}">
-        <img src="{{ 'logo-big.svg' | asset_url }}" alt="Adnan Mansuri Logo">
+        <img src="{{ section.settings.Footer_Image | image_url }}" alt="Adnan Mansuri Logo">
       </a>
     </div>
     <div class="site_footer-right site_navigation--item">
@@ -23,3 +23,19 @@
     </div>
   </div>
 </footer>
+
+
+{% schema %}
+{
+  "name": "Footer Settings",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "Footer_Image",
+      "label": "Footer Logo"
+      
+    }
+  ]
+}
+  
+{% endschema %}
