@@ -25,10 +25,18 @@
               "header_nav_text": "Home",
               "header_nav_url": "#Home"
             }
+          },
+          "header_nav_UyJTUQ": {
+            "type": "header_nav",
+            "settings": {
+              "header_nav_text": "Services",
+              "header_nav_url": "#services"
+            }
           }
         },
         "block_order": [
-          "header_nav_NphUUU"
+          "header_nav_NphUUU",
+          "header_nav_UyJTUQ"
         ],
         "settings": {
           "Header_Logo": "shopify://shop_images/Frame.png",
