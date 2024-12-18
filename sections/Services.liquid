@@ -10,24 +10,15 @@
     </div>
     <div class="craft-right">
       <div class="right-inner">
+        {% for block in section.blocks %}
+          
         <div class="right-box">
-          <h3>UI/UX Design</h3>
+          <h3>{{ section.settings.service_block_title }}</h3>
           <p>
-            I design user-friendly interfaces that prioritize simplicity and functionality, ensuring an engaging and seamless experience across all devices.
+            {{ section.settings.service_block_subtitle }}
           </p>
         </div>
-        <div class="right-box">
-          <h3>Web Development</h3>
-          <p>
-            I build fast, secure, and responsive websites tailored to your needs, providing scalable solutions that support your business growth.
-          </p>
-        </div>
-        <div class="right-box">
-          <h3>Graphic Design</h3>
-          <p>
-            I create visually striking designs that communicate your brand's message effectively, from logos to marketing materials, ensuring a memorable impression.
-          </p>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -50,7 +41,27 @@
       "id": "service_section_subtitle",
       "label": "Service Section Sub Title"
     }
+  ],
+  "blocks": [
+    {
+      "type": "Service_Block_Content",
+      "name": "Service Block Content",
+      "settings": [
+        {
+          "type": "text",
+            "id": "service_block_title",
+          "label": "Service Block Title"
+        },
+        {
+          "type": "text",
+            "id": "service_block_subtitle",
+          "label": "Service Block Sub Title"
+        }
+      ]
+      
+    }
   ]
+  
 }
 
   
