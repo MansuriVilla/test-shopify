@@ -1,7 +1,7 @@
 <section id="Home" class="site_top--area">
   <div class="site_top--area_inner">
-    <h1>Hello</h1>
-    <p>I am an experienced web developer specializing in graphics design and UI/UX.</p>
+    <h1>{{ section.settings.hero_title }}</h1>
+    <p>{{ section.settings.hero_subtitle }}</p>
     <div class="site_cta--outline">
       <a href="#" class="site_cta--outline__a">
         <span>Download CV</span>
@@ -16,3 +16,26 @@
     </div>
   </div>
 </section>
+
+
+
+{% schema %}
+{
+  "name": "Hero Section Settings",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero Title"
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Hero Sub Title"
+    }
+  ]
+}
+
+
+  
+{% endschema %}
