@@ -18,6 +18,18 @@
     "sections": {
       "header": {
         "type": "header",
+        "blocks": {
+          "header_nav_NphUUU": {
+            "type": "header_nav",
+            "settings": {
+              "header_nav_text": "Home",
+              "header_nav_url": "#Home"
+            }
+          }
+        },
+        "block_order": [
+          "header_nav_NphUUU"
+        ],
         "settings": {
           "Header_Logo": "shopify://shop_images/Frame.png",
           "cta_header_text": "Start Project",
