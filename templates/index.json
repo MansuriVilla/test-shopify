@@ -49,24 +49,16 @@
     "services": {
       "type": "Services",
       "blocks": {
-        "service_block_content_9hcUWD": {
+        "service_block_content_T3x3qD": {
           "type": "Service_Block_Content",
           "settings": {
-            "service_block_title": "sdfsdfsdf",
-            "service_block_subtitle": "sdfsdf"
-          }
-        },
-        "service_block_content_Yhfen9": {
-          "type": "Service_Block_Content",
-          "settings": {
-            "service_block_title": "sdfsdfsdf",
-            "service_block_subtitle": "sdfsdf"
+            "service_block_title": "fsdsdfsdfsdfsd",
+            "service_block_subtitle": "fsdfsdfsdfsdfsdfsdf"
           }
         }
       },
       "block_order": [
-        "service_block_content_9hcUWD",
-        "service_block_content_Yhfen9"
+        "service_block_content_T3x3qD"
       ],
       "settings": {
         "service_section_title": "SERVICES",
