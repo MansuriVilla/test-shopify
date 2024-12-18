@@ -22,7 +22,7 @@
           </li>
         </ul>
         <div class="cta_main diraction_aware_hover site_navigation--item">
-          <a href="#" class="cta">Start Project</a>
+          <a href="#" class="cta">{{ section.settings.cta_header_text }}</a>
         </div>
       </nav>
       <button class="menu-toggle">☰</button>
@@ -36,14 +36,16 @@
   {
     "name":"Header Settings",
     "settings": [
-      {
-        
-      "type":"image_picker",
+      {  
+        "type":"image_picker",
         "id": "Header_Logo",
         "label": "Header Logo"
-        
-      
-      }
+      },
+      {  
+        "type":"text",
+        "id": "cta_header_text",
+        "label": "Header CTA Icon"
+      },
     ]
   }
 {% endschema %}
