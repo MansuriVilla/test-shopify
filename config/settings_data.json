@@ -207,7 +207,9 @@
       },
       "footer": {
         "type": "footer",
-        "settings": {}
+        "settings": {
+          "footer_image": "shopify://shop_images/Frame_footer.png"
+        }
       }
     },
     "content_for_index": []
