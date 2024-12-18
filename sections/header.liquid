@@ -8,10 +8,13 @@
           </a>
         </div>
         <ul class="menu site_navigation--item">
+          {% for block in section.blocks %}
+            
           <li>
-            <a href="#Home" class="header_nav_links has_active--effect">Home</a>
+            <a href="{{ block.settings.header_nav_url }}" class="header_nav_links has_active--effect">{{ block.settings.header_nav_text }}</a>
           </li>
-          <li>
+          {% endfor %}
+          <!-- <li>
             <a href="#services" class="header_nav_links has_active--effect">Services</a>
           </li>
           <li>
@@ -19,7 +22,7 @@
           </li>
           <li>
             <a href="#skills" class="header_nav_links has_active--effect">Skills</a>
-          </li>
+          </li> -->
         </ul>
         <div class="cta_main diraction_aware_hover site_navigation--item">
           <a href="{{ section.settings.cta_url }}" class="cta">{{ section.settings.cta_header_text }} <span><img class="theme_icon" src="{{ section.settings.header_cta_icon |image_url }}" alt="right icon"></span></a>
@@ -60,6 +63,24 @@
         "id": "header_cta_icon",
         "label": "Header CTA Icon"
       },
+    ],
+    "blocks": [
+      {
+        "type": "header_nav",
+        "name": "Header Nav",
+        "settings": [
+          {
+            "type": "text",
+            "id": "header_nav_text",
+            "label": "Header Navigation Text"
+          },
+          {
+            "type": "url",
+            "id": "header_nav_url",
+            "label": "Header Navigation URL"
+          }
+        ]
+      }
     ]
   }
 {% endschema %}
