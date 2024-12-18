@@ -48,7 +48,30 @@
     },
     "services": {
       "type": "Services",
-      "settings": {}
+      "blocks": {
+        "service_block_content_9hcUWD": {
+          "type": "Service_Block_Content",
+          "settings": {
+            "service_block_title": "sdfsdfsdf",
+            "service_block_subtitle": "sdfsdf"
+          }
+        },
+        "service_block_content_Yhfen9": {
+          "type": "Service_Block_Content",
+          "settings": {
+            "service_block_title": "sdfsdfsdf",
+            "service_block_subtitle": "sdfsdf"
+          }
+        }
+      },
+      "block_order": [
+        "service_block_content_9hcUWD",
+        "service_block_content_Yhfen9"
+      ],
+      "settings": {
+        "service_section_title": "sdfsdf",
+        "service_section_subtitle": "sdfsdfsdf"
+      }
     },
     "projects_wXPQUA": {
       "type": "projects",
