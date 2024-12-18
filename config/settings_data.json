@@ -17,7 +17,10 @@
     "sections": {
       "header": {
         "type": "header",
-        "settings": {}
+        "settings": {
+          "cta_header_text": "Hello World Dynamic Now !!!!!",
+          "cta_url": "#"
+        }
       },
       "Home": {
         "type": "Home",
