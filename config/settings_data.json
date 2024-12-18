@@ -20,7 +20,7 @@
         "type": "header",
         "settings": {
           "Header_Logo": "shopify://shop_images/Frame.png",
-          "cta_header_text": "Hello World Dynamic Now !!!!!",
+          "cta_header_text": "Dynamic",
           "cta_url": "shopify://pages/contact-us"
         }
       },
