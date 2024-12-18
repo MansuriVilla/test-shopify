@@ -11,7 +11,10 @@
   "sections": {
     "main-content": {
       "type": "Home",
-      "settings": {}
+      "settings": {
+        "hero_title": "Hello",
+        "hero_subtitle": "I am an experienced web developer specializing in graphics design  and UI/UX. Skilled in crafting visually appealing and highly functional websites."
+      }
     },
     "services": {
       "type": "Services",
