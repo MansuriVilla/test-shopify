@@ -32,11 +32,27 @@
               "header_nav_text": "Services",
               "header_nav_url": "#services"
             }
+          },
+          "header_nav_ywkRW3": {
+            "type": "header_nav",
+            "settings": {
+              "header_nav_text": "Projects",
+              "header_nav_url": "#projects"
+            }
+          },
+          "header_nav_74mNtw": {
+            "type": "header_nav",
+            "settings": {
+              "header_nav_text": "Skills",
+              "header_nav_url": "#skills"
+            }
           }
         },
         "block_order": [
           "header_nav_NphUUU",
-          "header_nav_UyJTUQ"
+          "header_nav_UyJTUQ",
+          "header_nav_ywkRW3",
+          "header_nav_74mNtw"
         ],
         "settings": {
           "Header_Logo": "shopify://shop_images/Frame.png",
