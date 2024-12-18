@@ -13,6 +13,10 @@
       "type": "Home",
       "settings": {}
     },
+    "services": {
+      "type": "Services",
+      "settings": {}
+    },
     "projects_wXPQUA": {
       "type": "projects",
       "blocks": {
@@ -35,11 +39,21 @@
             "project_link": "/",
             "scroll_speed": 2.5
           }
+        },
+        "project_4Jdk3c": {
+          "type": "project",
+          "settings": {
+            "project_name": "Creative Printer",
+            "project_tag": "Graphics Design Agency",
+            "project_link": "/",
+            "scroll_speed": 3.5
+          }
         }
       },
       "block_order": [
         "project_94DfaC",
-        "project_eQndm3"
+        "project_eQndm3",
+        "project_4Jdk3c"
       ],
       "settings": {
         "title": "Projects",
@@ -49,6 +63,7 @@
   },
   "order": [
     "main-content",
+    "services",
     "projects_wXPQUA"
   ]
 }
