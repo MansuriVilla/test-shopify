@@ -11,6 +11,34 @@
   "sections": {
     "main-content": {
       "type": "Home",
+      "blocks": {
+        "slider_TwEmhN": {
+          "type": "Slider",
+          "settings": {
+            "hero_slider_text": "Hello World",
+            "highlight_text": false
+          }
+        },
+        "slider_VfX6mc": {
+          "type": "Slider",
+          "settings": {
+            "hero_slider_text": "Hello World From 2",
+            "highlight_text": true
+          }
+        },
+        "slider_XnXkGa": {
+          "type": "Slider",
+          "settings": {
+            "hero_slider_text": "Hello World From 3",
+            "highlight_text": false
+          }
+        }
+      },
+      "block_order": [
+        "slider_TwEmhN",
+        "slider_VfX6mc",
+        "slider_XnXkGa"
+      ],
       "settings": {
         "hero_title": "Hello",
         "hero_subtitle": "I am an experienced web developer specializing in graphics design  and UI/UX. Skilled in crafting visually appealing and highly functional websites.",
