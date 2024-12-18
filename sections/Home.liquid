@@ -11,9 +11,12 @@
   </div>
   <div id="site_ScrollContent_Home" class="slider">
     <div class="wrapper">
-      <h3 class="text-item">UI | UX Designer</h3>
-      <h3 class="text-item">Web Developer</h3>
-      <h3 class="text-item">Graphic Designer</h3>
+      {% for block in section.blocks %}
+  <h3 class="text-item {% if block.settings.highlight_text %}has__heighlight--clr{% endif %}">
+    {{ block.settings.hero_slider_text }}
+  </h3>
+{% endfor %}
+
     </div>
   </div>
 </section>
@@ -57,6 +60,12 @@
           "type": "text",
           "id": "hero_slider_text",
           "label": "Hero Slider Text"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight_text",
+          "label": "Highlight this text with special class (has__heighlight--clr)",
+          "default": false
         }
       ]
     }
