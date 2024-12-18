@@ -13,7 +13,9 @@
       "type": "Home",
       "settings": {
         "hero_title": "Hello",
-        "hero_subtitle": "I am an experienced web developer specializing in graphics design  and UI/UX. Skilled in crafting visually appealing and highly functional websites."
+        "hero_subtitle": "I am an experienced web developer specializing in graphics design  and UI/UX. Skilled in crafting visually appealing and highly functional websites.",
+        "hero_cta_text": "Download CV",
+        "hero_cta_url": "/"
       }
     },
     "services": {
