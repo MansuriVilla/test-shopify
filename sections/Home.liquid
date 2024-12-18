@@ -13,10 +13,10 @@
   <div id="site_ScrollContent_Home" class="slider">
     <div class="wrapper">
       {% for block in section.blocks %}
-  <h3 class="text-item {% if block.settings.highlight_text %}has__heighlight--clr{% endif %}">
-    {{ block.settings.hero_slider_text }}
-  </h3>
-{% endfor %}
+        <h3 class="text-item {% if block.settings.highlight_text %}has__heighlight--clr{% endif %}">
+          {{ block.settings.hero_slider_text }}
+        </h3>
+      {% endfor %}
 
     </div>
   </div>
