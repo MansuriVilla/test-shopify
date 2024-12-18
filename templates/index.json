@@ -135,11 +135,131 @@
         "title": "Projects",
         "description": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs."
       }
+    },
+    "skills_Mgz47m": {
+      "type": "skills",
+      "blocks": {
+        "skill_7UregN": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/html.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_hKFGrc": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/css.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_TpmaBD": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/js.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_zxHbnp": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/jquery.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_Jr97VP": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/gsap.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_pExUbe": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/bootstrap.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_gnURQP": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/vscode.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_URBnBt": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/sublime_text.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_xKXDAi": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/ai.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_tC8wzM": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/ps.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_GMerzh": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/xd.webp",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        },
+        "skill_xwHmeE": {
+          "type": "skill",
+          "settings": {
+            "skill_icon": "shopify://shop_images/figma.png",
+            "skill_name": "Skill Name",
+            "scroll_speed": 10
+          }
+        }
+      },
+      "block_order": [
+        "skill_7UregN",
+        "skill_hKFGrc",
+        "skill_TpmaBD",
+        "skill_zxHbnp",
+        "skill_Jr97VP",
+        "skill_pExUbe",
+        "skill_gnURQP",
+        "skill_URBnBt",
+        "skill_xKXDAi",
+        "skill_tC8wzM",
+        "skill_GMerzh",
+        "skill_xwHmeE"
+      ],
+      "settings": {
+        "title": "Skills Set",
+        "description": "I leverage a variety of tools and technologies to craft dynamic websites with robust functionality, ensuring optimal performance and user satisfaction for your projects."
+      }
     }
   },
   "order": [
     "main-content",
     "services",
-    "projects_wXPQUA"
+    "projects_wXPQUA",
+    "skills_Mgz47m"
   ]
 }
