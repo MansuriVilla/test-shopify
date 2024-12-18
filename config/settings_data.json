@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "custom_favicon": "shopify://shop_images/fav-icon.png",
     "theme_name": "My Custom Theme",
     "primary_color": "#3498db",
     "header_logo": "shopify://image/logo.png",
