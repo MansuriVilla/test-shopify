@@ -26,14 +26,14 @@ section { scroll-margin-top: 115px; }
 
 @font-face {
   font-family: 'Nexa-Heavy';
-  src: url('{{ 'Nexa-Heavy.woff2' | asset_url }}') format('woff2');
+  src: url( "Nexa-Heavy.woff2") format('woff2');
   font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Nexa-ExtraLight';
-  src: url('{{ 'Nexa-ExtraLight.woff2' | asset_url }}') format('woff2');
+  src: url( "Nexa-ExtraLight.woff2") format('woff2');
   font-weight: 400;
   font-display: swap;
 }
