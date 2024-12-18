@@ -4,7 +4,7 @@
     <p>{{ section.settings.hero_subtitle }}</p>
     <div class="site_cta--outline">
       <a href="#" class="site_cta--outline__a">
-        <span>Download CV</span>
+        <span>{{ section.settings.hero_cta_text }}</span>
       </a>
     </div>
   </div>
@@ -32,6 +32,11 @@
       "type": "text",
       "id": "hero_subtitle",
       "label": "Hero Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "hero_cta_text",
+      "label": "Hero CTA Title"
     }
   ]
 }
