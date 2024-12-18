@@ -21,7 +21,7 @@
         "settings": {
           "Header_Logo": "shopify://shop_images/Frame.png",
           "cta_header_text": "Hello World Dynamic Now !!!!!",
-          "cta_url": "#"
+          "cta_url": "shopify://pages/contact-us"
         }
       },
       "Home": {
