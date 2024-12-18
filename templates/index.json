@@ -43,17 +43,29 @@
         "project_4Jdk3c": {
           "type": "project",
           "settings": {
-            "project_name": "Creative Printer",
-            "project_tag": "Graphics Design Agency",
+            "project_image": "shopify://shop_images/portrait-of-illuminated-laptop.jpg",
+            "project_name": "gfjhhgfjhjj",
+            "project_tag": "ghjhgjkhgjkhgdjdhgfj",
             "project_link": "/",
-            "scroll_speed": 3.5
+            "scroll_speed": 4.5
+          }
+        },
+        "project_yyT7V6": {
+          "type": "project",
+          "settings": {
+            "project_image": "shopify://shop_images/business-dog-paws-on-keyboard.jpg",
+            "project_name": "gfhhgfjgfjh",
+            "project_tag": "ghjhgjhgjhgj",
+            "project_link": "/",
+            "scroll_speed": 5.5
           }
         }
       },
       "block_order": [
         "project_94DfaC",
         "project_eQndm3",
-        "project_4Jdk3c"
+        "project_4Jdk3c",
+        "project_yyT7V6"
       ],
       "settings": {
         "title": "Projects",
