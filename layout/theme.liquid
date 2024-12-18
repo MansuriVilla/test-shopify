@@ -18,8 +18,8 @@
     <meta name="twitter:title" content="{{ page_title }}" />
     <meta name="twitter:description" content="{{ shop.meta_description }}" />
     <meta name="twitter:image" content="{{ 'fav-icon.png' | asset_url }}" />
-    <link rel="icon" href="{{ settings.custom_favicon | img_url: '32x32' }}" type="image/x-icon" />
-<link rel="apple-touch-icon" href="{{ settings.custom_favicon | img_url: '32x32' }}" />
+    <link rel="icon" href="{{ settings.custom_favicon | image_url: width: '32x32' }}" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ settings.custom_favicon | image_url: width: '32x32' }}" />
 
     <link rel="stylesheet" href="{{ 'app.css' | asset_url }}" />
     <script type="application/ld+json">
