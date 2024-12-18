@@ -15,21 +15,21 @@
         "slider_TwEmhN": {
           "type": "Slider",
           "settings": {
-            "hero_slider_text": "Hello World",
+            "hero_slider_text": "UI / UX Designer",
             "highlight_text": false
           }
         },
         "slider_VfX6mc": {
           "type": "Slider",
           "settings": {
-            "hero_slider_text": "Hello World From 2",
+            "hero_slider_text": "Web Developer",
             "highlight_text": true
           }
         },
         "slider_XnXkGa": {
           "type": "Slider",
           "settings": {
-            "hero_slider_text": "Hello World From 3",
+            "hero_slider_text": "Graphics Designer",
             "highlight_text": false
           }
         }
@@ -53,22 +53,22 @@
         "service_block_content_T3x3qD": {
           "type": "Service_Block_Content",
           "settings": {
-            "service_block_title": "fsdsdfsdfsdfsd",
-            "service_block_subtitle": "fsdfsdfsdfsdfsdfsdf"
+            "service_block_title": "UI/UX Design",
+            "service_block_subtitle": "I design user-friendly interfaces that prioritize simplicity  and functionality, ensuring an engaging and seamless  experience across all devices."
           }
         },
         "service_block_content_KK4jey": {
           "type": "Service_Block_Content",
           "settings": {
-            "service_block_title": "sxdvljkfdhg",
-            "service_block_subtitle": "dkjbnekabgdfg"
+            "service_block_title": "Web Development",
+            "service_block_subtitle": "I build fast, secure, and responsive websites tailored to your needs, providing scalable solutions that support your business growth."
           }
         },
         "service_block_content_PxV6Mf": {
           "type": "Service_Block_Content",
           "settings": {
-            "service_block_title": "fdgaofdigjhfdiuohfgiufd",
-            "service_block_subtitle": "kdjgsdjkahbfsdjkfhf"
+            "service_block_title": "Graphic Design",
+            "service_block_subtitle": "I create visually striking designs that communicate your brand's message effectively, from logos to marketing materials, ensuring a memorable impression."
           }
         }
       },
@@ -78,8 +78,8 @@
         "service_block_content_PxV6Mf"
       ],
       "settings": {
-        "service_section_title": "Hello World From Sections 2",
-        "service_section_subtitle": "Hello World From Sections 2 Paragraph"
+        "service_section_title": "SERVICES",
+        "service_section_subtitle": "Offering custom web development, responsive designs, and user-focused solutions to help businesses establish a strong online presence and achieve their digital goals."
       }
     },
     "projects_wXPQUA": {
@@ -89,8 +89,8 @@
           "type": "project",
           "settings": {
             "project_image": "shopify://shop_images/Frame_12.png",
-            "project_name": "asdgfsdfsdf",
-            "project_tag": "xzcvdgfsdfsdgfsdf",
+            "project_name": "Creative Printer",
+            "project_tag": "Graphics Design Agency",
             "project_link": "/",
             "scroll_speed": 3.5
           }
@@ -99,8 +99,8 @@
           "type": "project",
           "settings": {
             "project_image": "shopify://shop_images/Frame_13.png",
-            "project_name": "dgd",
-            "project_tag": "sgffdgfdg",
+            "project_name": "A one Enterprise",
+            "project_tag": "Import & Export Broker Company",
             "project_link": "/",
             "scroll_speed": 4
           }
@@ -109,8 +109,8 @@
           "type": "project",
           "settings": {
             "project_image": "shopify://shop_images/Frame_14.png",
-            "project_name": "gfjhhgfjhjj",
-            "project_tag": "ghjhgjkhgjkhgdjdhgfj",
+            "project_name": "Interno",
+            "project_tag": "Intirior Designing Company",
             "project_link": "/",
             "scroll_speed": 5
           }
@@ -119,8 +119,8 @@
           "type": "project",
           "settings": {
             "project_image": "shopify://shop_images/Frame_15.png",
-            "project_name": "gfhhgfjgfjh",
-            "project_tag": "ghjhgjhgjhgj",
+            "project_name": "Brooklyn Travel & Tourism",
+            "project_tag": "Travel Company",
             "project_link": "/",
             "scroll_speed": 6
           }
