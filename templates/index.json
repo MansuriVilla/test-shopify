@@ -16,10 +16,44 @@
     "services": {
       "type": "Services",
       "settings": {}
+    },
+    "projects_wXPQUA": {
+      "type": "projects",
+      "blocks": {
+        "project_94DfaC": {
+          "type": "project",
+          "settings": {
+            "project_image": "shopify://shop_images/ringer-slider.png",
+            "project_name": "Creativedrfhdhgfdh Printer",
+            "project_tag": "Graphics Desigfn Agencyghgfhgfh",
+            "project_link": "/",
+            "scroll_speed": 2
+          }
+        },
+        "project_eQndm3": {
+          "type": "project",
+          "settings": {
+            "project_image": "shopify://shop_images/Group1000012006.png",
+            "project_name": "Creative Printgxnvcbnvbnvbnvcbner",
+            "project_tag": "Graphics Desigvn Agencybnvbnvbnvbn",
+            "project_link": "/",
+            "scroll_speed": 2.5
+          }
+        }
+      },
+      "block_order": [
+        "project_94DfaC",
+        "project_eQndm3"
+      ],
+      "settings": {
+        "title": "Projects",
+        "description": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs."
+      }
     }
   },
   "order": [
     "main-content",
-    "services"
+    "services",
+    "projects_wXPQUA"
   ]
 }
