@@ -2,9 +2,9 @@
   <div class="craft">
     <div class="craft-left">
       <div class="craft_left--sticky--area site_title--container site_title-column">
-        <h2 class="site_section--title">SERVICES</h2>
+        <h2 class="site_section--title">{{ section.settings.service_section_title }}</h2>
         <p class="site_section--decs">
-          Offering custom web development, responsive designs, and user-focused solutions to help businesses establish a strong online presence and achieve their digital goals.
+          {{ section.settings.service_section_subtitle }}
         </p>
       </div>
     </div>
@@ -32,3 +32,26 @@
     </div>
   </div>
 </section>
+
+
+
+
+{% schema %}
+{
+  "name": "Service Section Settings",
+  "settings": [
+    {
+      "type": "text",
+      "id": "service_section_title",
+      "label": "Service Section Title"
+    },
+    {
+      "type": "text",
+      "id": "service_section_subtitle",
+      "label": "Service Section Sub Title"
+    }
+  ]
+}
+
+  
+{% endschema %}
