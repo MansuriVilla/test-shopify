@@ -13,10 +13,6 @@
       "type": "Home",
       "settings": {}
     },
-    "services": {
-      "type": "Services",
-      "settings": {}
-    },
     "projects_wXPQUA": {
       "type": "projects",
       "blocks": {
@@ -53,7 +49,6 @@
   },
   "order": [
     "main-content",
-    "services",
     "projects_wXPQUA"
   ]
 }
