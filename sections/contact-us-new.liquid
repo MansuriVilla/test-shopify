@@ -1,6 +1,94 @@
+<div class="site_contact---page__container site_top--area">
+
+  <div class="contact--page_inner">
+    <div class="contact--page__left site_bg--clr_fff">
+      <h1 class="contact--page_title"> Start Project</h1>
+     <div class="contact--page_form--area">
+  <p class="contact--page-subtitle">Contact Details</p>
+<form
+  action="https://script.google.com/macros/s/AKfycbzHOAbm6YOrWMMiNH0cuDuxw2aVEiGDGCm_YTjnphyPmb6un3jIjWJH14bmFAYjSblY/exec"
+  method="post"
+  class="site_form--container"
+>
+  <div class="site-input_holder">
+    <input class="site_input" type="text" id="name" name="name" placeholder="e.g. John Doe" required />
+    <label class="site_input--label" for="name">Name</label>
+  </div>
+  <div class="site-input_holder">
+    <input class="site_input" type="number" id="phone" name="phone" placeholder="e.g. +1 450-504-5789" required />
+    <label class="site_input--label" for="phone">Phone Number</label>
+  </div>
+  <div class="site-input_holder">
+    <input class="site_input" type="email" id="email" name="email" placeholder="e.g. johndoe@example.com" required />
+    <label class="site_input--label" for="email">E-mail</label>
+  </div>
+  <div class="site-input_holder">
+    <input class="site_input" type="text" id="company" name="company" placeholder="e.g. Snip Code.inc" />
+    <label class="site_input--label" for="company">Company Name</label>
+  </div>
+  <div class="site-input_holder has_full--flex">
+    <textarea class="site_input site_input--textarea" id="idea" name="idea" placeholder="e.g. I want to create a modern e-commerce website." rows="6"></textarea>
+    <label class="site_input--label" for="idea">Have an Idea...??</label>
+  </div>
+  <div class="site_selection--area has_full--flex">
+    <div class="site_selection--title has_full--flex">
+      
+    <h4>What are you looking for?</h4>
+    </div>
+    <div class="selection_area-btn has_radio--hidden has_half--flex">
+      <input type="radio"  id="web_dev" name="service" value="Web development" required />
+      <label for="web_dev" class="site_cta--outline__000 selection_btn has_magnatic--effect">Web Development</label>
+    </div>
+    <div class="selection_area-btn has_radio--hidden has_half--flex">
+      <input type="radio"  id="ui_ux" name="service" value="UI/UX Design" required />
+      <label for="ui_ux" class="site_cta--outline__000 selection_btn has_magnatic--effect">UI/UX Design</label>
+    </div>
+    <div class="selection_area-btn has_radio--hidden has_half--flex">
+      <input type="radio"  id="graphic_design" name="service" value="Graphic Design" required />
+      <label for="graphic_design" class="site_cta--outline__000 selection_btn has_magnatic--effect">Graphic Design</label>
+    </div>
+  </div>
+  <div class="site_selection--area has_full--flex">
+    <div class="site_selection--title has_full--flex">
+    <h4>What’s your budget?</h4>
+    </div>
+    <div class="selection_area-btn has_radio--hidden has_half--flex">
+      <input type="radio"  id="budget_10_15k" name="budget" value="10-15k" required />
+      <label for="budget_10_15k" class="site_cta--outline__000 selection_btn has_magnatic--effect">10-15k</label>
+    </div>
+    <div class="selection_area-btn has_radio--hidden has_half--flex">
+      <input type="radio"  id="budget_20_25k" name="budget" value="20-25k" required />
+      <label for="budget_20_25k" class="site_cta--outline__000 selection_btn has_magnatic--effect">20-25k</label>
+    </div>
+    <div class="selection_area-btn has_radio--hidden has_half--flex">
+      <input type="radio"  id="budget_30k_above" name="budget" value="30k-Above" required />
+      <label for="budget_30k_above" class="site_cta--outline__000 selection_btn has_magnatic--effect" >30k-Above</label>
+    </div>
+  </div>
+  <button class="site_btn has_magnatic--effect" type="submit">Submit</button>
+</form>
+
+</div>
+
+    </div>
+
+    <div class="contact--page__right">
+      <img src="{{ section.settings.contact_page_img | image_url  }}" alt="Background Image">
+    </div>
+  
+  </div>
+  
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Contact Page",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "contact_page_img",
+        "label": "Contact Page Right Image"
+      }
+    ]
   }
 {% endschema %}
