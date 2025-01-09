@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function particalsMainFn () {
-  // Check if the 'Home' element exists on the page
   if (document.getElementById('Home')) {
     particlesJS('Home', {
       particles: {
@@ -266,25 +265,22 @@ function headerActiveEffect () {
     observer.observe(section)
   })
 
-  // Function to remove active class from all navigation links
   function removeActiveClass () {
     document.querySelectorAll('.has_active--effect').forEach(link => {
       link.classList.remove('isActive')
     })
   }
 
-  // Handle link clicks for smooth scrolling or navigation to index.html
   document.querySelectorAll('.has_active--effect').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href')
-      const isSamePage = href.startsWith('#') // Check if it's a same-page link
+      const isSamePage = href.startsWith('#')
       const isIndexPageLink = href.includes('index.html')
 
       if (isSamePage || isIndexPageLink) {
-        e.preventDefault() // Prevent default navigation
+        e.preventDefault()
 
         if (isSamePage) {
-          // Same-page navigation
           const targetId = href.substring(1)
           const targetSection = document.getElementById(targetId)
 
@@ -294,16 +290,13 @@ function headerActiveEffect () {
               block: 'start'
             })
 
-            // Add active class
             removeActiveClass()
             this.classList.add('isActive')
           }
         } else {
-          // Navigate to index.html with hash and ensure smooth scroll
           const targetURL = href
           window.location.href = targetURL
 
-          // Wait for the page to load and then scroll smoothly to the target section
           window.addEventListener('load', function () {
             const targetHash = window.location.hash
             if (targetHash) {
@@ -321,7 +314,6 @@ function headerActiveEffect () {
     })
   })
 
-  // Handle hash-based scrolling on index.html page load
   document.addEventListener('DOMContentLoaded', function () {
     const hash = window.location.hash
 
@@ -442,8 +434,8 @@ window.onload = function () {
 
   document.querySelectorAll('.right-box').forEach(function (box) {
     gsap.to(box, {
-      backgroundColor: '#000',
-      color: '#AEDEE0',
+      color: '#fff',
+      opacity: 1,
       duration: 1,
       scrollTrigger: {
         trigger: box,
@@ -458,109 +450,189 @@ window.onload = function () {
   document.getElementById('year').textContent = new Date().getFullYear()
 }
 
-const form = document.querySelector('form')
+function formValidationHandler () {
+  const form = document.querySelector('.site_form--container')
 
-if (form) {
+  if (!form) {
+    return
+  }
+
   form.addEventListener('submit', function (event) {
-    event.preventDefault() // Prevent form submission for validation
+    event.preventDefault() // Prevent default form submission for validation.
 
-    // Clear previous error messages
+    // Remove any existing error messages.
     document.querySelectorAll('.error-msg').forEach(msg => msg.remove())
 
     let isValid = true
 
-    // Validation rules for each input
-    const inputs = [
-      { id: 'name', message: 'Name is required.' },
-      { id: 'phone', message: 'Phone number must be valid.' },
-      { id: 'email', message: 'Email is required and must be valid.' },
-      { id: 'company', message: 'Company name is required.' }
-      // Skip validation for the 'idea' field since it's optional
+    // Validate required fields.
+    const fieldsToValidate = [
+      { id: 'name', message: 'Please enter your name.' },
+      { id: 'phone', message: 'Please enter a valid phone number.' },
+      { id: 'email', message: 'Please enter a valid email address.' },
+      { id: 'company', message: 'Please enter a company name.' }
     ]
 
-    inputs.forEach(({ id, message }) => {
-      const input = document.getElementById(id)
-
-      if (!validateField(input)) {
+    fieldsToValidate.forEach(({ id, message }) => {
+      const field = document.getElementById(id)
+      if (!field || !validateField(field)) {
         isValid = false
-        showError(input, message)
+        showError(field, message)
       }
     })
 
+    // Validate radio groups (service and budget).
+    const radioGroups = [
+      { name: 'service', message: 'Please select a service.' },
+      { name: 'budget', message: 'Please select a budget.' }
+    ]
+
+    radioGroups.forEach(({ name, message }) => {
+      if (!validateRadioGroup(name)) {
+        isValid = false
+        showRadioGroupError(name, message)
+      }
+    })
+
+    // If valid, alert success and submit the form.
     if (isValid) {
       alert('Form submitted successfully!')
+      form.submit()
     }
   })
-}
 
-// Helper function to validate fields (example implementation)
-function validateField (input) {
-  if (!input || input.value.trim() === '') {
-    return false
-  }
-  // Additional validation logic (e.g., regex for email or phone) can be added here
-  return true
-}
+  // Helper function to validate a single field.
+  function validateField (input) {
+    if (!input.value.trim()) return false // Empty value is invalid.
 
-// Helper function to show error messages
-function showError (input, message) {
-  if (!input) return
-
-  const error = document.createElement('div')
-  error.className = 'error-msg'
-  error.textContent = message
-  input.parentElement.appendChild(error)
-}
-
-function validateField (input) {
-  if (input.id === 'phone') {
-    // Validate phone number (allowing only digits and ensuring it's not empty)
-    return /^\d+$/.test(input.value.trim()) && input.value.trim() !== ''
-  } else if (input.type === 'email') {
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(input.value.trim())
-  } else {
-    // General required field validation
-    return input.value.trim() !== ''
-  }
-}
-
-function showError (input, message) {
-  const errorMsg = document.createElement('div')
-  errorMsg.className = 'error-msg'
-  errorMsg.textContent = message
-  errorMsg.style.color = 'red'
-  errorMsg.style.fontSize = '0.85rem'
-  errorMsg.style.marginTop = '5px'
-
-  input.parentNode.appendChild(errorMsg)
-}
-
-// Prevent up/down keys from incrementing/decrementing the phone number input
-const phoneInput = document.getElementById('phone')
-if (phoneInput) {
-  phoneInput.addEventListener('keydown', function (event) {
-    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
-      event.preventDefault()
+    if (input.id === 'phone') {
+      const phoneRegex = /^\+?\d{7,}$/ // At least 7 digits, optional leading '+'.
+      return phoneRegex.test(input.value.trim())
     }
+
+    if (input.type === 'email') {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ // Basic email format.
+      return emailRegex.test(input.value.trim())
+    }
+
+    return true // Other fields are valid if not empty.
+  }
+
+  // Helper function to validate radio groups.
+  function validateRadioGroup (name) {
+    const radios = document.getElementsByName(name)
+    return Array.from(radios).some(radio => radio.checked)
+  }
+
+  // Display an error message for input fields.
+  function showError (input, message) {
+    if (!input) return
+
+    const errorContainer = document.createElement('div')
+    errorContainer.className = 'error-msg'
+    errorContainer.style.display = 'flex'
+    errorContainer.style.alignItems = 'center'
+    errorContainer.style.gap = '5px'
+    errorContainer.style.color = 'red'
+    errorContainer.style.fontSize = '0.75rem'
+    errorContainer.style.letterSpacing = '1px'
+    errorContainer.style.webkitTextStroke = '1px red'
+
+    const icon = document.createElement('span')
+    icon.textContent = '⚠️' // You can replace this with an <img> tag for a custom icon.
+    icon.style.fontSize = '1rem'
+
+    const errorMessage = document.createElement('span')
+    errorMessage.textContent = message
+
+    errorContainer.appendChild(icon)
+    errorContainer.appendChild(errorMessage)
+
+    input.parentElement.appendChild(errorContainer)
+  }
+
+  // Display an error message for radio groups.
+  function showRadioGroupError (name, message) {
+    const radios = document.getElementsByName(name)
+    const container = radios[0]?.closest('.site_selection--area')
+
+    if (container) {
+      const errorContainer = document.createElement('div')
+      errorContainer.className = 'error-msg'
+      errorContainer.style.display = 'flex'
+      errorContainer.style.alignItems = 'center'
+      errorContainer.style.gap = '5px'
+      errorContainer.style.color = 'red'
+      errorContainer.style.fontSize = '0.75rem'
+      errorContainer.style.letterSpacing = '1px'
+      errorContainer.style.webkitTextStroke = '1px red'
+
+      const icon = document.createElement('span')
+      icon.textContent = '⚠️' // You can replace this with an <img> tag for a custom icon.
+      icon.style.fontSize = '1rem'
+
+      const errorMessage = document.createElement('span')
+      errorMessage.textContent = message
+
+      errorContainer.appendChild(icon)
+      errorContainer.appendChild(errorMessage)
+
+      container.appendChild(errorContainer)
+    }
+  }
+
+  // Prevent non-numeric input in the phone field.
+  document.getElementById('phone').addEventListener('input', function (event) {
+    this.value = this.value.replace(/\D/g, '') // Replace any non-digit character.
+  })
+
+  document
+    .getElementById('phone')
+    .addEventListener('keydown', function (event) {
+      // Disable the up and down arrow keys.
+      if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+        event.preventDefault()
+      }
+    })
+}
+
+formValidationHandler()
+
+function magnaticEffect () {
+  document.querySelectorAll('.has_magnatic--effect').forEach(button => {
+    button.addEventListener('mousemove', e => {
+      const rect = button.getBoundingClientRect()
+      const x = e.clientX - rect.left - rect.width / 2
+      const y = e.clientY - rect.top - rect.height / 2
+
+      button.style.transform = `translate(${x * 0.2}px, ${
+        y * 0.2
+      }px) scale(1.1)`
+      button.classList.add('is_magnatic--effect')
+    })
+
+    button.addEventListener('mouseleave', () => {
+      button.style.transform = `translate(0, 0) scale(1)`
+      button.classList.remove('is_magnatic--effect')
+    })
   })
 }
 
-document.querySelectorAll('.has_magnatic--effect').forEach(button => {
-  button.addEventListener('mousemove', e => {
-    const rect = button.getBoundingClientRect()
-    const x = e.clientX - rect.left - rect.width / 2
-    const y = e.clientY - rect.top - rect.height / 2
+magnaticEffect()
 
-    // Apply the magnetic effect with scale
-    button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) scale(1.1)`
-    button.classList.add('is_magnatic--effect')
-  })
+// Wait until the DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all form elements for animation
+  const formElements = document.querySelectorAll(
+    '#myForm .site-input_holder, #myForm .site_selection--area'
+  )
 
-  button.addEventListener('mouseleave', () => {
-    // Reset the button position with a smooth transition
-    button.style.transform = `translate(0, 0) scale(1)`
-    button.classList.remove('is_magnatic--effect')
+  // Apply GSAP stagger animation
+  gsap.from(formElements, {
+    opacity: 0,
+    y: 50, // Move elements from 50px below
+    duration: 0.8, // Animation duration for each element
+    stagger: 0.2, // Delay between animations of each element
+    ease: 'power2.out' // Smooth easing effect
   })
 })
