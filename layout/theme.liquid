@@ -66,7 +66,7 @@
 
 <body>
     {% section 'header' %}
-    <main class="site_page-container">
+    <main class="site_page-container {% if request.path == '/pages/contact-us' %}contact--page_container{% endif %}" >
         {{ content_for_layout }}
     </main>
     {% section 'footer' %}
