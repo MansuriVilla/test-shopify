@@ -620,7 +620,7 @@ function magnaticEffect () {
 
 magnaticEffect()
 
-// Wait until the DOM content is fully loaded
+
 document.addEventListener('DOMContentLoaded', () => {
   // Select all form elements for animation
   const formElements = document.querySelectorAll(
@@ -630,9 +630,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apply GSAP stagger animation
   gsap.from(formElements, {
     opacity: 0,
-    y: 50, // Move elements from 50px below
-    duration: 0.8, // Animation duration for each element
-    stagger: 0.2, // Delay between animations of each element
-    ease: 'power2.out' // Smooth easing effect
+    y: 50, 
+    duration: 0.8, 
+    stagger: 0.2, 
+    ease: 'power2.out' 
   })
 })
