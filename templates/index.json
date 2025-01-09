@@ -145,7 +145,7 @@
           "settings": {
             "skill_icon": "shopify://shop_images/html.webp",
             "skill_name": "Skill Name",
-            "scroll_speed": 1
+            "scroll_speed": 20
           }
         },
         "skill_hKFGrc": {
