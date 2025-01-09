@@ -153,3 +153,30 @@ img { width:100%; height:auto; }
 .form_submit--btn { -webkit-text-stroke: 0.9px #fff; }
 .form_submit--btn:hover { -webkit-text-stroke: 0.9px #000; }
 /* __________________________________________CONTACT PAGE CSS END__________________________________________ */
+
+
+
+
+@media only screen and (max-width:768px) {
+ .site-input_holder { flex: 100%; }
+.off-canvas-menu .cta_main { display: block; }
+.header .menu-toggle,.off-canvas-menu { display: block; }
+.header .menu-toggle { background: #fff; padding: 20px; }
+.off-canvas-menu { position: fixed; top: 0; right: 0; height: 100svh; width: 100%; border-radius: 20px; background: #333; color: white; transform: translateX(200%); transition: transform 0.5s linear; z-index: 1000; display: flex; flex-direction: column; }
+.off-canvas-menu .cta_main { background-color: transparent; }
+.craft { flex-direction: column; }
+.craft .craft-right { margin-right: 0; padding:  0px; }
+.site_title--container { flex-wrap: wrap; row-gap: 20px; }
+.skills_icon--area { column-gap: clamp(30px, 7vw, 150px); }
+.site_footer { overflow: hidden; }
+.site_footer-left { position: absolute; left: 0; z-index: -1; opacity: .5; height: 114%; top: 50%; transform: translate(-38%, -50%); ; }
+.site_footer-left img { max-width:100%; width:100%; height: 100%; }
+.site_footer-container { position: relative; }
+.site_footer-container .site_navigation--item { flex: 100%; width: 100%; }
+.contact--page_inner .contact--page__right { display:none; }
+.site_form--container { column-gap: 100px; row-gap: 40px; }
+.selection_btn { padding:13px 11px; }
+.site_selection--area { column-gap:5px; }
+.craft .craft-right .right-inner .right-box { padding: 20px 0; }
+.site_footer-nav--links.contact-section { max-width: 100%; }
+ }
