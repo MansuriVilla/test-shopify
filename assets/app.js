@@ -7,6 +7,8 @@ gsap.ticker.add(time => {
 
 gsap.ticker.lagSmoothing(0)
 
+document.addEventListener('DOMContentLoaded', () => {
+
 function offcanvsMenu () {
   const menuToggle = document.querySelector('.menu-toggle')
   const offCanvasMenu = document.querySelector('.off-canvas-menu')
@@ -79,7 +81,7 @@ function offcanvsMenu () {
   })
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+
   offcanvsMenu()
 })
 
