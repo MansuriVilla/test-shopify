@@ -248,6 +248,21 @@
         "settings": {
           "footer_image": "shopify://shop_images/Frame_footer.png"
         }
+      },
+      "contact-us-new": {
+        "type": "contact-us-new",
+        "blocks": {
+          "radio_CQwQ4X": {
+            "type": "Radio",
+            "settings": {
+              "serviceType": "hgfdgf"
+            }
+          }
+        },
+        "block_order": [
+          "radio_CQwQ4X"
+        ],
+        "settings": {}
       }
     },
     "content_for_index": [],
