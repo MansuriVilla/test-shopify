@@ -1,4 +1,27 @@
 
+<section id="Home" class="site_top--area">
+  <div class="site_top--area_inner">
+    <h1>{{ section.settings.hero_title }}</h1>
+    <p>{{ section.settings.hero_subtitle }}</p>
+    <div class="site_cta--outline">
+      <a href="{{ section.settings.hero_cta_url }}" class="site_cta--outline__a">
+        <span>{{ section.settings.hero_cta_text }}</span>
+        <span><img src="{{ section.settings.hero_cta_img | image_url }}" alt="Download CV Icon"></span>
+      </a>
+    </div>
+  </div>
+  <div id="site_ScrollContent_Home" class="slider">
+    <div class="wrapper">
+      {% for block in section.blocks %}
+        <h3 class="text-item {% if block.settings.highlight_text %}has__heighlight--clr{% endif %}">
+          {{ block.settings.hero_slider_text }}
+        </h3>
+      {% endfor %}
+
+    </div>
+  </div>
+  
+</section>
 
 
 
