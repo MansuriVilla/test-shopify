@@ -60,6 +60,7 @@
         "service_block_content_KK4jey": {
           "type": "Service_Block_Content",
           "settings": {
+            "service_block_title": "Web Development",
             "service_block_subtitle": "I build fast, secure, and responsive websites tailored to your needs, providing scalable solutions that support your business growth."
           }
         },
