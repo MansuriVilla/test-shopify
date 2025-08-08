@@ -1,7 +1,8 @@
 <section
   id="projects"
-  class="has_scroll--speed__section site_content-container"
-  data-disable-scroll-animation="768">
+  class="{% if section.settings.enable_parallax %}has_scroll--speed__section{% endif %} site_content-container"
+  {% if section.settings.enable_parallax %} data-disable-scroll-animation="{{section.settings.media_query | default: 768}}" {% endif %}
+>
   <div class="projects_container--main">
     <div class="projects_content">
       <div class="project_title site_title--container">
@@ -11,27 +12,37 @@
       <div class="project_content--items">
         {% for block in section.blocks %}
           <div
-            class="project_content-item has_scroll--speed__element"
-            data-scroll-speed="{{ block.settings.scroll_speed | default: 3.5 }}">
-            <div class="project_img--mian">
-              <img
-                src="{{ block.settings.project_image | image_url }}"
-                alt="{{ block.settings.project_name }}"
-                class="project_img" />
+            class="project_content-item {% if section.settings.enable_parallax %}has_scroll--speed__element{% endif %}"
+            {% if section.settings.enable_parallax %} data-scroll-speed="{{ block.settings.scroll_speed }}" {% endif %}
+          >
+            <div class="project_img--main">
+              {% if block.settings.project_image != blank %}
+                <img
+                  src="{{ block.settings.project_image | image_url }}"
+                  alt="{{ block.settings.project_name | default: 'Project Image' }}"
+                  class="project_img"
+                >
+              {% endif %}
             </div>
             <div class="project_text--area">
               <div class="project_text--content">
                 <div class="project_area--name">
-                  <h3 class="project_name">{{ block.settings.project_name }}</h3>
+                  {% if block.settings.project_name != blank %}
+                    <h3 class="project_name">{{ block.settings.project_name }}</h3>
+                  {% endif %}
                 </div>
                 <div class="project_area--tag">
-                  <p class="project_tag">{{ block.settings.project_tag }}</p>
+                  {% if block.settings.project_tag != blank %}
+                    <p class="project_tag">{{ block.settings.project_tag }}</p>
+                  {% endif %}
                 </div>
               </div>
               <div class="project_link--area">
-                <a href="{{ block.settings.project_link }}" class="project_link--arrow">
-                  <img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow" />
-                </a>
+                {% if block.settings.project_link != blank %}
+                  <a href="{{ block.settings.project_link }}" class="project_link--arrow">
+                    <img src="{{ 'arrow.webp' | asset_url }}" alt="Arrow">
+                  </a>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -49,13 +60,26 @@
       "type": "text",
       "id": "title",
       "label": "Section Title",
-      "default": "Projects"
+      "default": "Section Heading"
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Section Description",
-      "default": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs."
+      "default": "Section Description, Type whatever you want...!!"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax",
+      "label": "Enable Card Parallex",
+      "info": "Card Will Move, Based On Your Scroll.",
+      "default": true
+    },
+    {
+      "type": "number",
+      "id": "media_query",
+      "label": "Stop Movement",
+      "info": "Stop Movement From Your Desier Device Screen"
     }
   ],
   "blocks": [
@@ -72,13 +96,13 @@
           "type": "text",
           "id": "project_name",
           "label": "Project Name",
-          "default": "Creative Printer"
+          "default": "Lorem.inc"
         },
         {
           "type": "text",
           "id": "project_tag",
           "label": "Project Tag",
-          "default": "Graphics Design Agency"
+          "default": "Design Agency"
         },
         {
           "type": "url",
@@ -89,11 +113,12 @@
         {
           "type": "range",
           "id": "scroll_speed",
-          "label": "Scroll Speed",
+          "label": "Movement Speed",
           "default": 3.5,
           "min": 0.5,
           "max": 10,
-          "step": 0.5
+          "step": 0.5,
+          "info": "Product Cards Speed Movements"
         }
       ]
     }
@@ -101,9 +126,8 @@
   "presets": [
     {
       "name": "Projects Section",
-      "category": "Custom"
+      "category": "Section"
     }
   ]
 }
-
 {% endschema %}
