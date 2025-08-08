@@ -1,0 +1,73 @@
+<section id="skills" class="site_content-container">
+  <div class="skills_title--area site_title--container">
+    <h2 class="skills_title site_section--title">{{ section.settings.title }}</h2>
+    <p class="skills_decs site_section--decs">
+      {{ section.settings.description }}
+    </p>
+  </div>
+  <div class="skills_icon--area has_scroll--speed__section" data-disable-scroll-animation="768">
+    {% for block in section.blocks %}
+      <div class="skills_icon">
+        <img
+          class="skill has_scroll--speed__element"
+          data-scroll-speed="{{ block.settings.scroll_speed | default: 10 }}"
+          src="{{ block.settings.skill_icon | image_url }}"
+          alt="Skill Icon {{ block.settings.skill_name }}" />
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+
+  {
+    "name": "Skills Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Skills Set"
+      }, {
+        "type": "textarea",
+        "id": "description",
+        "label": "Section Description",
+        "default": "I leverage a variety of tools and technologies to craft dynamic websites with robust functionality, ensuring optimal performance and user satisfaction for your projects."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "skill",
+        "name": "Skill Icon",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "skill_icon",
+            "label": "Skill Icon"
+          }, {
+            "type": "text",
+            "id": "skill_name",
+            "label": "Skill Name",
+            "default": "Skill Name"
+          }, {
+            "type": "range",
+            "id": "scroll_speed",
+            "label": "Scroll Speed",
+            "default": 10,
+            "min": 1,
+            "max": 20,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Skills Section",
+        "category": "Section"
+      }
+    ]
+  }
+
+
+{% endschema %}
