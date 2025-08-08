@@ -30,10 +30,12 @@
     <textarea class="site_input site_input--textarea" id="idea" name="idea" placeholder="e.g. I want to create a modern e-commerce website." rows="6"></textarea>
     <label class="site_input--label" for="idea">Have an Idea...??</label>
   </div>
+
+  {% for block in section.blocks %}
   <div class="site_selection--area has_full--flex">
     <div class="site_selection--title has_full--flex">
       
-    <h4>What are you looking for?</h4>
+    <h4>{{block.settings.block_title}}</h4>
     </div>
     <div class="selection_area-btn has_radio--hidden has_half--flex">
       <input type="radio"  id="web_dev" name="service" value="Web development" required />
@@ -48,7 +50,11 @@
       <label for="graphic_design" class="site_cta--outline__000 selection_btn has_magnatic--effect">Graphic Design</label>
     </div>
   </div>
-  <div class="site_selection--area has_full--flex">
+  {% endfor %}
+
+
+  {% comment %} 
+   <div class="site_selection--area has_full--flex">
     <div class="site_selection--title has_full--flex">
     <h4>What’s your budget?</h4>
     </div>
@@ -64,7 +70,8 @@
       <input type="radio"  id="budget_30k_above" name="budget" value="30k-Above" required />
       <label for="budget_30k_above" class="site_cta--outline__000 selection_btn has_magnatic--effect" >30k-Above</label>
     </div>
-  </div>
+  </div> 
+  {% endcomment %}
   <button class="site_btn has_magnatic--effect" type="submit">Submit</button>
 </form>
 
@@ -88,6 +95,25 @@
         "id": "contact_page_img",
         "label": "Contact Page Right Image"
       }
+    ],
+    "blocks": [
+      {
+        "type": "block_title",
+        "name": "Block Title",
+        "settings": [
+          {
+            "type": "text",
+            "id": "block_title",
+            "label": "Block Heading",
+            "default":"Block Title"
+          },
+        
+        ],
+        
+        
+      }
     ]
+  
   }
 {% endschema %}
+
