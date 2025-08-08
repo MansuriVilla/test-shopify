@@ -1,0 +1,96 @@
+<section class="section">
+  <div
+    class="{% if section.settings.has_overlay %}section_has--overlay{% endif %} section_inner"
+    {% if section.settings.section_image %}
+      style="background: url({{ section.settings.section_image | img_url: 'master' }}) center center / cover no-repeat"
+    {% endif %}
+  >
+    <h1 class="section_with-bg--heading">{{ section.settings.section__text }}</h1>
+  </div>
+</section>
+
+{% style %}
+    .section_inner{padding:{{section.settings.section_inner--padding | default: '100px'}}px;  text-align:{{ section.settings.text_align | default: 'left'}};     position: relative; }
+    .section_has--overlay .section_with-bg--heading {  position: relative; z-index: 1; }
+    .section_with-bg--heading{color: {{ section.settings.text_color | default: "#fff"}};}
+    .section_has--overlay::after { content: '';  background-color: {{section.settings.overlay_color | default: "#00000040"}}; position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 0; }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Section With Overlay",
+  "settings": [
+     {
+      "type": "range",
+      "id": "section_inner--padding",
+      "label": "Adjust Padding",
+      "default": 100,
+      "min": 50,
+      "max": 300,
+      "step": 50
+    },
+    {
+      "type": "text",
+      "id": "section__text",
+      "label": "Section Heading",
+      "default": "Section Heading"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+        "type": "color",
+        "id": "text_color",
+        "label": "Heading Color",
+        "default": "#FFF",
+    },
+   
+     {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Section Background Image"
+    },
+     {
+      "type": "checkbox",
+      "id": "has_overlay",
+      "label": "Show Overlay",
+      "default": false
+    },
+     {
+        "type": "color",
+        "id": "overlay_color",
+        "label": "Overlay Color",
+        "alpha": true,
+        "default":"#00000040"
+    },
+   
+    
+   
+    
+   
+  ],
+  "presets": [
+    {
+      "name": "Section With Overlay",
+      "category": "Section"
+    }
+  ]
+}
+{% endschema %}
