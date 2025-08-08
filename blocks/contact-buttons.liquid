@@ -1,53 +1,50 @@
 {% schema %}
-{
-  "name": "Skills Section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Section Title",
-      "default": "Skills Set"
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Section Description",
-      "default": "I leverage a variety of tools and technologies to craft dynamic websites with robust functionality, ensuring optimal performance and user satisfaction for your projects."
-    }
-  ],
-  "blocks": [
-    {
-      "type": "skill",
-      "name": "Skill",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "skill_icon",
-          "label": "Skill Icon"
-        },
-        {
-          "type": "text",
-          "id": "skill_name",
-          "label": "Skill Name",
-          "default": "Skill Name"
-        },
-        {
-          "type": "range",
-          "id": "scroll_speed",
-          "label": "Scroll Speed",
-          "default": 10,
-          "min": 1,
-          "max": 20,
-          "step": 1
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Skills Section",
-      "category": "Section"
-    }
-  ]
-}
+  {
+    "name": "Skills Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Skills Set"
+      }, {
+        "type": "textarea",
+        "id": "description",
+        "label": "Section Description",
+        "default": "I leverage a variety of tools and technologies to craft dynamic websites with robust functionality, ensuring optimal performance and user satisfaction for your projects."
+      }
+    ],
+    "blocks": [
+      {
+        "type": "skill",
+        "name": "Skill",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "skill_icon",
+            "label": "Skill Icon"
+          }, {
+            "type": "text",
+            "id": "skill_name",
+            "label": "Skill Name",
+            "default": "Skill Name"
+          }, {
+            "type": "range",
+            "id": "scroll_speed",
+            "label": "Scroll Speed",
+            "default": 10,
+            "min": 1,
+            "max": 20,
+            "step": 1
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Skills Section",
+        "category": "Section"
+      }
+    ]
+  }
 {% endschema %}
