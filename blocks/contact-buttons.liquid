@@ -1,4 +1,25 @@
+<section id="skills" class="site_content-container">
+  <div class="skills_title--area site_title--container">
+    <h2 class="skills_title site_section--title">{{ section.settings.title }}</h2>
+    <p class="skills_decs site_section--decs">
+      {{ section.settings.description }}
+    </p>
+  </div>
+  <div class="skills_icon--area has_scroll--speed__section" data-disable-scroll-animation="768">
+    {% for block in section.blocks %}
+      <div class="skills_icon">
+        <img
+          class="skill has_scroll--speed__element"
+          data-scroll-speed="{{ block.settings.scroll_speed | default: 10 }}"
+          src="{{ block.settings.skill_icon | image_url }}"
+          alt="Skill Icon {{ block.settings.skill_name }}" />
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
 {% schema %}
+
   {
     "name": "Skills Section",
     "settings": [
@@ -17,7 +38,7 @@
     "blocks": [
       {
         "type": "skill",
-        "name": "Skill",
+        "name": "test",
         "settings": [
           {
             "type": "image_picker",
@@ -47,4 +68,6 @@
       }
     ]
   }
+
+
 {% endschema %}
