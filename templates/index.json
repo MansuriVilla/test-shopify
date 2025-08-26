@@ -47,6 +47,19 @@
         "hero_cta_img": "shopify://shop_images/cv.webp"
       }
     },
+    "section_with_overlay_bYA33L": {
+      "type": "section-with-overlay",
+      "name": "Section With Overlay",
+      "settings": {
+        "section_inner--padding": 150,
+        "section__text": "Section Heading",
+        "text_align": "center",
+        "text_color": "#FFF",
+        "section_image": "shopify://shop_images/business-dog-paws-on-keyboard.jpg",
+        "has_overlay": true,
+        "overlay_color": "#00000091"
+      }
+    },
     "services": {
       "type": "Services",
       "blocks": {
@@ -134,7 +147,8 @@
       ],
       "settings": {
         "title": "Projects",
-        "description": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs."
+        "description": "Showcasing a variety of web development projects, from custom websites to dynamic web applications, built to meet diverse client needs.",
+        "enable_parallax": true
       }
     },
     "skills_Mgz47m": {
@@ -259,6 +273,7 @@
   },
   "order": [
     "main-content",
+    "section_with_overlay_bYA33L",
     "services",
     "projects_wXPQUA",
     "skills_Mgz47m"
