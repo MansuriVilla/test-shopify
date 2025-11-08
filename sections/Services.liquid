@@ -16,6 +16,9 @@
           <p>
             {{ block.settings.service_block_subtitle }}
           </p>
+          {% for block in block  %}
+            <h2>{{ block.settings.text_heading }}</h2>
+          {% endfor %}
         </div>
         {% endfor %}
       </div>
@@ -57,9 +60,22 @@
           "label": "Service Block Sub Title"
         }
       ]
-      
     }
   ],
+  "blocks":[
+    {
+      "type": "block",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text_heading",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
+
    "presets": [
     {
       "name": "Service Section",
