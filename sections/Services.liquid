@@ -11,23 +11,38 @@
     <div class="craft-right">
       <div class="right-inner">
         {% for block in section.blocks %}
-        <div class="right-box">
-          <h3>{{ block.settings.service_block_title }}</h3>
-          <p>
-            {{ block.settings.service_block_subtitle }}
-          </p>
-          {% for block in block  %}
-            <h2>{{ block.settings.text_heading }}</h2>
-          {% endfor %}
-        </div>
+          {% if block.type == 'service_block' %}
+            <div class="right-box" {{ block.shopify_attributes }}>
+              <h3>{{ block.settings.service_block_title }}</h3>
+              <p>{{ block.settings.service_block_subtitle }}</p>
+              
+              {% comment %} Find all tag blocks that belong to this service block {% endcomment %}
+              {% assign current_service_id = block.id %}
+              {% assign has_tags = false %}
+              
+              {% for tag_block in section.blocks %}
+                {% if tag_block.type == 'tag_block' and tag_block.settings.parent_service == current_service_id %}
+                  {% assign has_tags = true %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+              
+              {% if has_tags %}
+                <ul class="service-tags">
+                  {% for tag_block in section.blocks %}
+                    {% if tag_block.type == 'tag_block' and tag_block.settings.parent_service == current_service_id %}
+                      <li {{ tag_block.shopify_attributes }}>{{ tag_block.settings.tag_text }}</li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
   </div>
 </section>
-
-
-
 
 {% schema %}
 {
@@ -46,44 +61,44 @@
   ],
   "blocks": [
     {
-      "type": "Service_Block_Content",
-      "name": "Service Blck Content",
+      "type": "service_block",
+      "name": "Service Block",
       "settings": [
         {
           "type": "text",
-            "id": "service_block_title",
+          "id": "service_block_title",
           "label": "Service Block Title"
         },
         {
           "type": "text",
-            "id": "service_block_subtitle",
+          "id": "service_block_subtitle",
           "label": "Service Block Sub Title"
         }
       ]
-    }
-  ],
-  "blocks":[
+    },
     {
-      "type": "block",
-      "name": "Heading",
+      "type": "tag_block",
+      "name": "Tag/List Item",
       "settings": [
         {
           "type": "text",
-          "id": "text_heading",
-          "label": "Heading"
+          "id": "parent_service",
+          "label": "Parent Service Block ID",
+          "info": "Copy the block ID from the service block above"
+        },
+        {
+          "type": "text",
+          "id": "tag_text",
+          "label": "Tag Text"
         }
       ]
     }
   ],
-
-   "presets": [
+  "presets": [
     {
       "name": "Service Section",
       "category": "Section"
     }
   ]
-  
 }
-
-  
 {% endschema %}
